@@ -20,6 +20,6 @@ public class Audio extends Midia {
 	
 	@Override
 	public String toString() { //+Audio
-		return "Origem: " + this.caminhoMidia + "\nDuração: " + audio();
+		return "\n" + getClass().getSimpleName() + "\nOrigem: " + this.caminhoMidia + "\nDuração: " + audio();
 	}
 }
