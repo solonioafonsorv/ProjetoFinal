@@ -1,0 +1,1 @@
+Arquivo necessário para JUnit
