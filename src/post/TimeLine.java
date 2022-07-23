@@ -26,6 +26,18 @@ public class TimeLine {
 		return listaPostsPublicados;
 	}
     
+    public void publicarPost(Post post) {
+    	listaPostsPublicados.add(post);
+    }
+    
+    public void removerPost(Post post) {
+    	for (Post p : listaPostsPublicados) {
+			if(p.equals(post)) {
+				listaPostsPublicados.remove(post);
+			}
+		}
+    }
+    
 	@Override
     public int hashCode() {
         int hash = 7;
