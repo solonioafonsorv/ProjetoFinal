@@ -124,14 +124,6 @@ public abstract class Jogador {
 
     @Override
     public String toString() {
-    	String jogos = "";
-    	String posts = "\n";
-    	for (Jogo jogo : colecaoJogos) {
-    		jogos = jogos + jogo;
-		}	
-    	for (Post post : timeline.getListaPostsPublicados()) {
-    		posts = posts + post;
-		}	
         return "\n" + this.getClass().getSimpleName() + "\n" + "\nNome: " + nome + "\nSobrenome: " + sobrenome + "\nNickname: " + nickname + "\nEmail: " + email + "\nIdade: " + idade;
     }
 }
