@@ -65,7 +65,7 @@ public class Jogo {
     
     @Override
     public String toString() {
-        return "\nID: " + id + "\nNome: " + nome + "\nPreco: " + preco;
+        return "\n\nID: " + id + "\nNome: " + nome + "\nPreco: " + preco;
     }
     
     

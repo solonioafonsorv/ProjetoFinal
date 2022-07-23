@@ -2,6 +2,7 @@ package bean;
 
 import java.util.ArrayList;
 
+import midia.Midia;
 import post.Post;
 import post.TimeLine;
 
@@ -30,6 +31,7 @@ public abstract class Jogador {
             this.email = email;
             this.idade = idade;
             this.senha = senha;
+            this.timeline = new TimeLine();
             this.colecaoJogos = new ArrayList<Jogo>();
         } 
     	
@@ -120,7 +122,15 @@ public abstract class Jogador {
 
     @Override
     public String toString() {
-        return "Jogador{" + "nome=" + nome + ", sobrenome=" + sobrenome + ", nickname=" + nickname + ", email=" + email + ", idade=" + idade + ", senha=" + senha + ", colecaoJogos=" + colecaoJogos + ", timeline=" + timeline + '}';
+    	String jogos = "";
+    	String posts = "";
+    	for (Jogo jogo : colecaoJogos) {
+    		jogos = jogos + jogo;
+		}	
+    	for (Post post : timeline.getListaPostsPublicados()) {
+    		posts = posts + post;
+		}	
+        return "\nJogador!\n" + "\nNome: " + nome + "\nSobrenome: " + sobrenome + "\nNickname: " + nickname + "\nEmail: " + email + "\nIdade: " + idade + "\nSenha: " + senha + "\n\nJogos na Coeleção: " + jogos + "\n\nTimeline: " + posts;
     }
 }
 
