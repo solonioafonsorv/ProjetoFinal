@@ -53,7 +53,7 @@ public class Post {
     
     @Override
     public String toString() {
-    	String midias = "\n";
+    	String midias = "";
     	if (listaMidiasPost.size() == 0)
     		return "\nPost:" + textoPost + "\nHorário da Publicação: " + horarioPublicacao + "\nCurtidas: " + curtidas;
     	else
