@@ -13,13 +13,11 @@ public class Main {
     	Jogo game1 = new Jogo(187.30, "GoodOfFar");
     	Jogo game2 = new Jogo(120.20, "LauraProoft");
     	post1.adicionarMidia(new Imagem("/home/Cherry_Tree.png", "1980x1080"));
-    	Jogador jogador1 = new JogadorNoob("Tony", "Tony", "Choppa", "TonyTonyChoppa@Strawhats.com", 21, "MissHiriluk");
+    	Jogador jogador1 = new JogadorNoob("Tony", "Tony", "Choppa", "TonyTonyChoppa@Strawhats.com", 21, "MrHiriluk");
     	jogador1.adicionarJogo(game1);
     	jogador1.adicionarJogo(game2);
     	jogador1.adicionarPost(post1);
-    	jogador1.imprimirJogos();
-    	
-    	
+    	System.out.println(jogador1.toString());
     }
     
 }
