@@ -8,10 +8,12 @@ public class TimeLine {
     private List<Post> listaPostsPublicados = new ArrayList<>();
     private int id;
 
-    public void visualizarPosts() {
+    public String visualizarPosts() {
+    	String posts = "";
         for (Post post : listaPostsPublicados) {
-            publicarPost(post);
+            posts = posts + post;
         }
+        return posts;
     }
     
     public int curtidasTotais(){
