@@ -5,12 +5,12 @@ import java.util.Objects;
 
 public class TimeLine {
 
-    private ArrayList<Post> listaPostsPublicados = new ArrayList<>();
+    private List<Post> listaPostsPublicados = new ArrayList<>();
     private int id;
 
     public void visualizarPosts() {
         for (Post post : listaPostsPublicados) {
-            System.out.println(post.toString());
+            publicarPost(post);
         }
     }
     
@@ -67,6 +67,6 @@ public class TimeLine {
     
     @Override
     public String toString() {
-        return "TimeLine{" + "listaPostsPublicados=" + listaPostsPublicados + ", id=" + id + '}';
+        return "\n\n" + listaPostsPublicados + "\nID: " + id;
     }
 }

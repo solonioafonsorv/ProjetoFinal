@@ -14,11 +14,13 @@ public class Post {
     private int curtidas;        
     
     public Post(String textoPost, int curtidas) {
-        if(textoPost != null && textoPost.length() > 0 && textoPost.length() <= 100)
-            this.textoPost = textoPost;
+        if(textoPost != null && textoPost.length() > 0 && textoPost.length() <= 100) {
+        	this.curtidas = curtidas;
+        	this.textoPost = textoPost;
+        	return;
+        }   
         else
             System.out.println("Caracteres inválidos!");
-        this.curtidas = curtidas;
     }
 
     public String getTextoPost() {
@@ -51,14 +53,14 @@ public class Post {
     
     @Override
     public String toString() {
-    	String aux = "\n";
+    	String midias = "\n";
     	if (listaMidiasPost.size() == 0)
     		return "\nPost:" + textoPost + "\nHorário da Publicação: " + horarioPublicacao + "\nCurtidas: " + curtidas;
     	else
     		for (Midia midia : listaMidiasPost) {
-				aux = aux + midia.toString();
+				midias = midias + midia.toString();
 			}
-    		return "\nPost: " + textoPost + "\nMidias: " + aux + "\n\nHorário da Publicação: " + horarioPublicacao + "\nCurtidas: " + curtidas;
+    		return "\nPost: " + textoPost + "\n\nMidias: " + midias + "\n\nHorário da Publicação: " + horarioPublicacao + "\nCurtidas: " + curtidas;
     }
 }
 
