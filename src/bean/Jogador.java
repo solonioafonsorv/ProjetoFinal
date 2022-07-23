@@ -57,16 +57,11 @@ public abstract class Jogador {
     }
     
     public void adicionarPost(Post post) {
-    	System.out.println(timeline.toString());
+    	timeline.publicarPost(post);
     }
     
     public void removerPost(Post post) {
-    	for (Post p : timeline.getListaPostsPublicados()) {
-			if (p.equals(post)) {
-				getTimeline().getListaPostsPublicados().remove(p);
-				return;
-			}
-		}
+    	timeline.removerPost(post);
     }
     
     public String getNome() {
