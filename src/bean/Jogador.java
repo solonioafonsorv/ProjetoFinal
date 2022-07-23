@@ -2,7 +2,6 @@ package bean;
 
 import java.util.ArrayList;
 
-import midia.Midia;
 import post.Post;
 import post.TimeLine;
 
@@ -43,19 +42,22 @@ public abstract class Jogador {
     	colecaoJogos.add(game);
     }
     
-    public void removerJogo(Jogo game) {
+    public boolean removerJogo(Jogo game) {
     	for (Jogo jogo : colecaoJogos) {
 			if (jogo.equals(game)) {
 				colecaoJogos.remove(jogo);
-				return;
+				return true;
 			}
 		}
+		return false;
     }
     
-    public void imprimirJogos() {
+    public String imprimirJogos() {
+    	String jogos = "";
     	for (Jogo jogo : colecaoJogos) {
-			System.out.println(jogo);
+			jogos = jogos + jogo;
 		}
+    	return jogos;
     }
     
     public void adicionarPost(Post post) {
@@ -123,14 +125,14 @@ public abstract class Jogador {
     @Override
     public String toString() {
     	String jogos = "";
-    	String posts = "";
+    	String posts = "\n";
     	for (Jogo jogo : colecaoJogos) {
     		jogos = jogos + jogo;
 		}	
     	for (Post post : timeline.getListaPostsPublicados()) {
     		posts = posts + post;
 		}	
-        return "\nJogador!\n" + "\nNome: " + nome + "\nSobrenome: " + sobrenome + "\nNickname: " + nickname + "\nEmail: " + email + "\nIdade: " + idade + "\nSenha: " + senha + "\n\nJogos na Coeleção: " + jogos + "\n\nTimeline: " + posts;
+        return "\n" + this.getClass().getSimpleName() + "\n" + "\nNome: " + nome + "\nSobrenome: " + sobrenome + "\nNickname: " + nickname + "\nEmail: " + email + "\nIdade: " + idade;
     }
 }
 
