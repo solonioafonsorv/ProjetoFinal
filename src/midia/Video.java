@@ -19,6 +19,6 @@ public class Video extends Midia {
 	
 	@Override
 	public String toString() { //+Video
-		return "\nOrigem: " + this.caminhoMidia + "\nDuração: " + video();
+		return "Origem: " + this.caminhoMidia + "\nDuração: " + video();
 	}
 }

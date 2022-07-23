@@ -20,7 +20,7 @@ public class Imagem extends Midia {
 	
 	@Override
 	public String toString() { //+Imagem
-		return "\nOrigem: " + this.caminhoMidia + "\nResolução: " + imagem();	
+		return "Origem: " + this.caminhoMidia + "\nResolução: " + imagem();	
 	}
 	
 	
