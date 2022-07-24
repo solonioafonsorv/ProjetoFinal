@@ -1,4 +1,11 @@
-todos os testes ficam aqui, para eles funcionarem corretamente é necessário a adição do arquivo JUnit na biblitoeca, o arquivo está na pasta lib
+todos os testes ficam aqui
+
+OBS: Não é mais necessário o arquivo da lib, porém, caso necessário, ele ainda está disponível para uso, guia de uso abaixo.
+
+
+=== Guia de Uso ===
+
+para eles funcionarem corretamente é necessário a adição do arquivo JUnit na biblitoeca, o arquivo está na pasta lib
 
 
 
@@ -12,3 +19,5 @@ Add External JARs
 Seleciona o arquivo
 Aplicar e Fechar.
 >>>> Pronto <<<<
+
+=== Guia de Uso ===
