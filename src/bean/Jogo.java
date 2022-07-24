@@ -1,8 +1,7 @@
 package bean;
 
 public class Jogo {
-
-
+	
     private int id;
     private double preco;
     private String nome;
