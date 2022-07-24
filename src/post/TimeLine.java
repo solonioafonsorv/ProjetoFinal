@@ -5,10 +5,18 @@ import java.util.Objects;
 
 public class TimeLine {
 
-    private List<Post> listaPostsPublicados = new ArrayList<>();
+    private List<Post> listaPostsPublicados;
     private int id;
 
-    public String visualizarPosts() {
+    
+    
+    public TimeLine() {
+		super();
+		this.listaPostsPublicados = new ArrayList<>();
+		this.id = hashCode();
+	}
+
+	public String visualizarPosts() {
     	String posts = "";
         for (Post post : listaPostsPublicados) {
             posts = posts + post;

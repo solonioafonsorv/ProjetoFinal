@@ -47,8 +47,8 @@ public class Post {
         listaMidiasPost.remove(midia);
     }
     
-    public void exibirHorarioPost() {
-        System.out.println(formatar.format(horarioPublicacao));
+    public String exibirHorarioPost() {
+    	return formatar.format(horarioPublicacao);
     }
     
     @Override
